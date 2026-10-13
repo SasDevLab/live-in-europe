@@ -111,3 +111,19 @@ body.intro {
 	.box_down img, .box1 img, .box2 img { width: 100% !important; height: auto; }
 	.footer { width: auto !important; }
 }
+
+/* La lettera della Commissione (pagina premio.html): un foglio */
+.lettera {
+	margin: 18px 0; padding: 34px 40px; background: #fffdf6; border: 1px solid #d9d2bd;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); font-family: Georgia, "Times New Roman", serif;
+}
+.articolo .ombra .lettera, .articolo .ombra .lettera p, .articolo .ombra .lettera div {
+	font-size: 15px !important; line-height: 1.6 !important; color: #222 !important; word-spacing: normal !important;
+}
+.lettera-testa { text-align: center; letter-spacing: 1px; color: #003399 !important; font-weight: bold; padding-bottom: 14px; border-bottom: 2px solid #FFCC00; }
+.lettera-data { text-align: right; margin: 18px 0; }
+.lettera-a { margin: 0 0 22px; }
+.lettera-bravi { text-align: center; font-size: 22px !important; font-weight: bold; color: #003399 !important; }
+.lettera-firma { text-align: right; margin-top: 28px; font-style: italic; }
+.lettera-nota { font-size: 12px !important; color: #888 !important; }
+@media (max-width: 850px) { .lettera { padding: 20px 16px; } }

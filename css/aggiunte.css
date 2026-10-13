@@ -1,0 +1,92 @@
+/* Correzioni del restauro (2026): tutto cio' che non c'era nel 2008 sta qui. */
+.logo { display: block; width: 100%; height: auto; }
+.intro { width: 630px; max-width: 100%; background: #000; }
+/* i tre pulsanti erano Flash di Dreamweaver: stessa misura, 93x33 */
+.pulsante {
+	float: left; width: 91px; height: 26px; line-height: 26px; margin: 3px 0 0 2px;
+	border: 1px solid #7a7a7a; border-radius: 5px;
+	background: linear-gradient(#f4f4f4, #b9b9b9);
+	font: 12px/26px Arial, sans-serif; color: #000 !important; text-align: center;
+}
+.pulsante:hover { background: linear-gradient(#ffffff, #d6d6d6); font-weight: normal; }
+
+/* Internet Explorer centrava la pagina con text-align:center del body */
+#wrapper { margin: 0 auto; max-width: 100%; }
+/* IE allargava i riquadri fino a contenere le colonne affiancate; gli altri browser no */
+.box-content, .box-content1 { height: auto !important; overflow: hidden; }
+.box-inter { height: auto !important; }
+
+/* Negli articoli il testo sta in un <p> che contiene una tabella: oggi il <p> si chiude
+   prima e il testo perde lo stile. Lo stile del paragrafo va quindi sulla cella. */
+.articolo .ombra td:not([width="32%"]):not(.footer) {
+	text-align: left; color: #666666; font-size: 12px; line-height: 20px; word-spacing: 2px;
+}
+
+/* Home: i riquadri bianchi erano tre pezzi (immagine sopra, bordi, immagine sotto) tenuti
+   insieme da margini negativi che reggevano solo in IE. Ora sono un bordo solo. */
+.home .inter, .home .inter1, .home .box1 img[src*="inter_center_down"] { display: none !important; }
+.home .box-inter {
+	border: 2px solid #A5A5A5; border-radius: 16px; box-sizing: border-box;
+	margin: 0 0 10px 0 !important; padding: 8px 2px;
+}
+.home .box-content div[align="left"] { margin-top: 10px !important; }
+.home .box-content { margin-bottom: 0; margin-top: 0 !important; }
+.home .box-content1 { margin-bottom: 0; margin-top: -10px !important; }
+.home .box1 img, .home .box_down img { display: block; }
+.home .box-content1 > table { width: 100% !important; float: none; table-layout: fixed; }
+.home .box-content1 .box1 { margin-top: 0 !important; }
+.home .box-content1 > table > tbody > tr > td { width: 50%; vertical-align: top; }
+.home .box-content1 > table > tbody > tr > td > div { margin: 10px 0 0 10px !important; }
+
+/* Respiro (chiesto il 13/10/2026): riquadri meno attaccati fra loro, quello in basso centrato,
+   testo degli articoli staccato dal bordo della pagina. */
+.home .box-inter { margin-bottom: 16px !important; }
+.home .ombra > tbody > tr > td[width="32%"] > div { margin-left: 14px; }
+.home img[src*="liceo2"] { margin-top: 14px; }
+/* i due riquadri grigi partono dallo stesso filo a sinistra, e quello basso finisce dove finisce il Menu:
+   18 + 572 + 14 + 204 = 808, quindi il basso e' largo 790 (le sue immagini da 774 si allargano del 2%) */
+@media (min-width: 851px) {
+	.home .ombra > tbody > tr > td[width="67%"] > div { margin-left: 18px !important; }
+	.home .ombra > tbody > tr > td[height="191"] > div { width: 790px; margin: 12px 0 0 18px; }
+	.home .box_down, .home .box-content1 { width: auto !important; box-sizing: border-box; }
+	.home td[height="191"] .box1 { width: auto; }   /* .box1 e' largo 402: la cornice di sotto restava a meta' */
+	.home .box_down img, .home td[height="191"] .box1 img { width: 100%; height: auto; }
+}
+.home .box-content1 > table > tbody > tr > td > div { margin: 14px 0 0 14px !important; }
+.articolo .ombra > tbody > tr > td:not([background]):not(:has(.logo)):not([width="32%"]) { padding: 0 18px; }
+
+/* Telefono: nel 2008 non esisteva. La tabella larga 825 si scioglie in una colonna:
+   prima il contenuto, sotto il menu. Su schermo largo non cambia niente. */
+@media (max-width: 850px) {
+	#wrapper { width: 100% !important; }
+	.ombra, .ombra > tbody, .ombra > tbody > tr, .ombra > tbody > tr > td {
+		display: block; width: auto !important; height: auto !important; box-sizing: border-box;
+	}
+	/* menu in fondo: negli articoli il testo e' spezzato in due righe di tabella col menu in mezzo */
+	.ombra > tbody { display: flex !important; flex-direction: column; }
+	.ombra > tbody > tr { display: contents !important; }
+	.ombra > tbody > tr > td[width="32%"] { order: 8; }
+	.ombra > tbody > tr > td.footer { order: 9; }
+	.ombra > tbody > tr > td[background] { overflow: hidden; min-height: 40px; }
+	/* le tabelline "foto accanto al testo" diventano foto sopra e testo sotto */
+	.ombra table, .ombra table tbody, .ombra table tr, .ombra table td { display: block; width: auto !important; height: auto !important; }
+	.ombra img { max-width: 100%; height: auto; }
+	.articolo .ombra p { font-size: 15px !important; line-height: 1.5 !important; }
+	.ombra > tbody > tr > td[valign] div, .ombra > tbody > tr > td[height="191"] div, .ombra td[colspan] > div > div {
+		width: auto !important; max-width: 100%; float: none !important;
+		margin-left: 0 !important; margin-right: 0 !important; box-sizing: border-box;
+	}
+	.ombra > tbody > tr > td[valign], .ombra > tbody > tr > td[width="100%"] { padding: 0 10px; }
+	.articolo .ombra td:not([width="32%"]):not(.footer), .home .ombra div, .home .ombra p { font-size: 15px !important; line-height: 1.5 !important; }
+	.ombra td[width="32%"] a { font-size: 17px; line-height: 2; }
+	.home .box-content1 > table, .home .box-content1 > table > tbody, .home .box-content1 > table > tbody > tr,
+	.home .box-content1 > table > tbody > tr > td { display: block; width: auto !important; }
+	.home .box-content1 > table > tbody > tr > td > div { margin: 10px !important; }
+	.home .box-content div[align="left"] { margin: 10px !important; }
+	.home .box-content > div[style*="float:right"] { padding: 0 10px; }
+	/* le cornici a pezzi d'immagine hanno larghezza fissa: sul telefono il bordo lo fa il CSS */
+	.box_up, .box_lateral, .box_down { background-size: 100% 100% !important; margin-top: 15px !important; }
+	.box_down div { margin: 0 !important; }
+	.box_down img, .box1 img, .box2 img { width: 100% !important; height: auto; }
+	.footer { width: auto !important; }
+}

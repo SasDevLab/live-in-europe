@@ -1,0 +1,8 @@
+body {
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 14px;
+}
+a:link { color:#ffffff; text-decoration: none; }
+a:visited { color: #ffffff; text-decoration: none; }
+a:hover { color: #FFCC00; text-decoration: none; font-weight: bold; }

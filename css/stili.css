@@ -1,0 +1,120 @@
+body {
+    background-image:url(../immagini/bg.jpg);
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 14px;
+}
+#wrapper {
+  width: 990px;
+}
+.ombra {
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-right-style: groove;
+	border-bottom-style: groove;
+	border-left-style: groove;
+	border-right-color: #919191;
+	border-bottom-color: #919191;
+	border-left-color: #919191;
+}
+.box_up {
+	width:403px;
+	margin-top: 23px;
+	background-position:center;
+	background-repeat:no-repeat;
+	background:url(../immagini/centro_up.jpg);
+	
+}
+
+.box-content {
+	margin: 10px 10px 10px 10px ;
+	padding: 0; 
+	margin: 0 0 10px 0;
+	border-left: 2px solid #A5A5A5;
+	border-right: 2px solid #A5A5A5;
+	background-color: #e0e0e0;
+}
+.noborder {
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+}
+.box1 {
+	width: 402px;
+}
+.box-content1 {
+	margin: 10px 10px 10px 10px ;
+	padding: 0; 
+	margin: 0 0 10px 0;
+	border-left: 2px solid #A5A5A5;
+	border-right: 2px solid #A5A5A5;
+	background-color: #e0e0e0;
+}
+.box-content3 {
+	border-left: 2px solid #A5A5A5;
+	border-right: 2px solid #A5A5A5;
+	background-color: #ffffff;
+	border-top:3px dotted #A5A5A5;
+}
+.box2 {
+	width: 203px;
+}
+.footer {
+clear: both;
+margin: 0 auto;
+padding: 10px 0 20px 0;
+width: 736px;
+text-align: center;
+color: #808080;
+font-size: 0.9em;
+}
+.inter {
+	width: 201px;
+	margin-top: 23px;
+}
+.box-inter {
+	padding: 0; 
+	margin: 0 0 10px 0;
+	border-left: 2px solid #A5A5A5;
+	border-right: 2px solid #A5A5A5;
+	background-color: #FFFFFF;
+	
+}
+.box_lateral {
+	height:33px;
+	width:204px;
+	margin-top:25px;
+	background-position:center;
+	background-repeat:no-repeat;
+	background:url(../immagini/lateral_up.jpg);
+}	
+.box_down {
+	height:34px;
+	width:767px;
+	margin-top:25px;
+
+}	
+a:link { color:#333333; text-decoration: none; }
+a:visited { color: #333333; text-decoration: none; }
+a:hover { color: #FFCC00; text-decoration: none; font-weight: bold; }
+a menu:link { color:#333333; text-decoration: none; font-weight: bold}
+a menu:visited { color: #333333; text-decoration: none; font-weight: bold }
+a menu:hover { color: #FFCC00; text-decoration: none; font-weight: bold; }
+.inter1 {
+	width: 201px;
+}
+
+
+.trat {
+	border-bottom-style: dotted;
+	border-bottom-color: #a5a5a5;
+	border-bottom-width: thin;
+}
+
+
+	
+	

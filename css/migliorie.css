@@ -1,0 +1,30 @@
+/* Migliorie del 13/10/2026: il sito "meno vecchio". Una per blocco e una per commit:
+   per toglierne una si cancella il suo blocco (o `git revert` del suo commit);
+   per toglierle tutte si leva la riga di migliorie.css in converti.py. */
+
+/* 1. Testo piu' grande e arioso (era 12 punti) */
+body { font-family: Tahoma, Verdana, "Segoe UI", system-ui, sans-serif; }
+.articolo .ombra td:not([width="32%"]):not(.footer), .articolo .ombra p {
+	font-size: 15px !important; line-height: 1.65 !important; word-spacing: normal !important; color: #444 !important;
+}
+.articolo .ombra h4 { font-size: 20px; }
+.home .box-inter p, .home .box-inter div, .home .trat div { font-size: 13.5px !important; line-height: 1.45; }
+
+/* 2. La pagina come una scheda: staccata dall'alto, ombra morbida, angoli arrotondati */
+@media (min-width: 851px) {
+	#wrapper { padding: 28px 0 48px; }
+	.ombra { border: 0 !important; border-radius: 14px; box-shadow: 0 12px 44px rgba(0, 0, 0, 0.28); }
+	.logo { border-radius: 14px 14px 0 0; }
+}
+
+/* 3. Riquadri vivi: tutto il riquadro porta all'articolo (non solo "continua") e si solleva al passaggio */
+.home .box-inter, .home .trat { position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+.home .box-inter a::after, .home .trat a::after { content: ""; position: absolute; inset: 0; }
+.home .box-inter:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2); }
+.home .trat:hover a { color: #003399; }
+
+/* 4. Il logo entra in dissolvenza, al posto dell'animazione Flash; solo in home, e non per chi ha chiesto meno movimento */
+@media (prefers-reduced-motion: no-preference) {
+	.home .logo { animation: entra-logo 1.4s ease-out both; }
+	@keyframes entra-logo { from { opacity: 0; } to { opacity: 1; } }
+}

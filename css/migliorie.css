@@ -28,3 +28,25 @@ body { font-family: Tahoma, Verdana, "Segoe UI", system-ui, sans-serif; }
 	.home .logo { animation: entra-logo 1.4s ease-out both; }
 	@keyframes entra-logo { from { opacity: 0; } to { opacity: 1; } }
 }
+
+/* 6. Pagine interne: le migliorie della home portate su articoli, link e crediti */
+/* titolo in blu Europa con la riga gialla */
+.articolo .ombra h4 { display: inline-block; padding-bottom: 5px; border-bottom: 3px solid #FFCC00; color: #003399 !important; }
+/* il testo e' in due pezzi (accanto al menu, poi a tutta larghezza): via il vuoto e il gradino fra i due */
+.articolo .ombra p { margin-left: 0 !important; margin-right: 0 !important; }
+.articolo .ombra > tbody > tr > td[width="100%"] > p { margin-top: 0; }
+/* fotografie con angoli morbidi e ombra, che si avvicinano al passaggio */
+.articolo img:is([src*="foto"], [src*="liceo"], [src*="/ls."], [src*="moro"], [src*="web-2"], [src*="prima"], [src*="seconda"], [src*="terza"]) {
+	border-radius: 8px; box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2); transition: transform 0.2s, box-shadow 0.2s;
+}
+.articolo img:is([src*="foto"], [src*="liceo"], [src*="/ls."], [src*="moro"], [src*="web-2"], [src*="prima"], [src*="seconda"], [src*="terza"]):hover {
+	transform: scale(1.03); box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+/* la galleria della festa: foto piu' grandi (erano 160 punti su originali da 630), due per riga */
+.articolo img[src*="foto"] { width: 232px; max-width: 100%; height: auto; margin: 8px 4px; }
+/* la pagina dei link: voci grandi, blu, con la freccia */
+.articolo .ombra a[target="_blank"] { display: inline-block; padding: 3px 0; font-size: 16px; color: #003399; }
+.articolo .ombra a[target="_blank"]::before { content: "\2197\00a0"; color: #FFCC00; font-weight: bold; }
+.articolo .ombra a[target="_blank"]:hover { text-decoration: underline; font-weight: normal; }
+/* menu: al passaggio blu e sottolineato (il grassetto giallo faceva saltare la riga e si leggeva male sul bianco) */
+.box-content3 a:hover { color: #003399; font-weight: normal; text-decoration: underline; }

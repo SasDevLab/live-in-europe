@@ -55,6 +55,10 @@ body.intro {
 .home .box-content1 > table > tbody > tr > td { width: 50%; vertical-align: top; }
 .home .box-content1 > table > tbody > tr > td > div { margin: 10px 0 0 10px !important; }
 
+/* I titoli "Relazioni con l'Ue" e "Menu" sono JPG col fondo grigio che copriva il bordo della cornice:
+   scendono di 4 punti e si fondono col fondo (darken lascia vedere il bordo sotto). */
+.box_up img, .box_lateral img { position: relative; top: 4px; mix-blend-mode: darken; }
+
 /* Respiro (chiesto il 13/10/2026): riquadri meno attaccati fra loro, quello in basso centrato,
    testo degli articoli staccato dal bordo della pagina. */
 .home .box-inter { margin-bottom: 16px !important; }

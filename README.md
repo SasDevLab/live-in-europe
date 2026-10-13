@@ -1,6 +1,6 @@
 # Live in Europe (2008)
 
-Il sito con cui un gruppo di studenti e docenti del Liceo Scientifico "Galileo Galilei" di Bitonto ha partecipato nel 2008 al concorso **Europa alla Lavagna**, promosso dalla Rappresentanza in Italia della Commissione europea.
+Il sito con cui un gruppo di studenti e docenti del Liceo Scientifico "Galileo Galilei" di Bitonto ha partecipato nel 2008 al concorso **Europa alla Lavagna**, promosso dalla Rappresentanza in Italia della Commissione europea, **classificandosi al quarto posto**.
 
 **Si guarda qui: https://sasdevlab.github.io/live-in-europe/**
 
@@ -12,7 +12,6 @@ Il sito è stato ritrovato su un vecchio disco e rimesso in piedi diciotto anni 
 
 - **Flash**: l'intro era un filmato Flash, oggi è un video HTML5 con la sua musica. Il logo animato è diventato un'immagine, i pulsanti del menu sono link normali.
 - **Impaginazione**: era costruita per Internet Explorer 6. I riquadri sono stati ridisegnati in CSS perché restino allineati nei browser di oggi.
-- **Telefono**: nel 2008 non serviva. Ora sotto gli 850 punti la pagina diventa una colonna sola.
 - **Nomi dei file**: tolti accenti e spazi (`legalità.htm` è diventato `legalita.htm`).
 - **Persone**: i cognomi sono abbreviati, tranne quelli di chi ha curato il restauro e la grafica. Le pagine con persone (crediti, pensieri, integrazione) chiedono ai motori di ricerca di non essere indicizzate.
 
